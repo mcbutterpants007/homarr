@@ -1,0 +1,14 @@
+@import "@homarr/gridstack/dist/gridstack.min.css";
+
+:root {
+  --neon: #39ff14;
+  --retro-bg: radial-gradient(circle, #111, #000), url('/images/retro-grid.png');
+  --retro-bg-size: 20px 20px;
+}
+
+body {
+  background: var(--retro-bg);
+  background-size: var(--retro-bg-size);
+  color: var(--neon);
+  font-family: var(--font-retro), monospace;
+}

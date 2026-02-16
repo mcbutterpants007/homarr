@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import "~/styles/retro.scss";
+import { PressStart2P } from "next/font/google";
 
-import "@homarr/notifications/styles.css";
+import "~/styles/retro.scss";
+
+
+const fontRetro = PressStart2P({
+  variable: '--font-retro',
+  subsets: ['latin'],
+});
+
 import "@homarr/spotlight/styles.css";
 import "@homarr/ui/styles.css";
-import "~/styles/scroll-area.scss";
 
 import { notFound } from "next/navigation";
 import type { DayOfWeek } from "@mantine/dates";
@@ -33,10 +41,6 @@ import { AuthProvider } from "./_client-providers/session";
 import { TRPCReactProvider } from "./_client-providers/trpc";
 import { composeWrappers } from "./compose";
 
-const fontSans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 // eslint-disable-next-line no-restricted-syntax
 export const generateMetadata = async (): Promise<Metadata> => ({
@@ -138,7 +142,7 @@ export default async function Layout(props: {
         <SearchEngineOptimization />
         <CrowdinLiveTranslation locale={locale} />
       </head>
-      <body className={["font-sans", fontSans.variable].join(" ")}>
+      <body className={["font-sans", fontSans.variable, fontRetro.variable].join(" ")}>
         <StackedProvider>
           <Notifications />
           {props.children}
