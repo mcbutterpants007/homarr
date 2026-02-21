@@ -1,16 +1,21 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-
-import "~/styles/retro.scss";
 import { PressStart2P } from "next/font/google";
-
-import "~/styles/retro.scss";
-
 
 const fontSans = Inter({
   variable: '--font-sans',
   subsets: ['latin'],
 });
+
+const fontRetro = PressStart2P({
+  variable: '--font-retro',
+  subsets: ['latin'],
+});
+
+import "~/styles/retro.scss";
+
+
+
 
 
 import "@homarr/spotlight/styles.css";
