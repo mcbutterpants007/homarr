@@ -51,7 +51,7 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts", ".output/**", ".vercel/output/**"]
+      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts", ".output/**", ".vercel/output/**", "cli.cjs", "tasks.cjs", "wssServer.cjs"]
     },
     "dev": {
       "persistent": true,
